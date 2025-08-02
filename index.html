@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Star's Local Tours</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root {
+      --bg:#f5f7fa;
+      --card:#ffffff;
+      --radius:12px;
+      --shadow:0 8px 24px rgba(0,0,0,0.08);
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#1f2937;
+      line-height:1.5;
+    }
+    header{
+      padding:1rem 1.5rem;
+      background:#0f4c81;
+      color:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:0.5rem;
+    }
+    .logo{font-weight:700;font-size:1.25rem;letter-spacing:0.5px;}
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:1rem;
+      font-size:0.9rem;
+    }
+    .hero{
+      padding:3rem 1.5rem;
+      text-align:center;
+    }
+    .hero h1{
+      margin:0;
+      font-size:2.25rem;
+      line-height:1.1;
+    }
+    .hero p{
+      margin:0.75rem 0 1.5rem;
+      font-size:1rem;
+    }
+    .btn{
+      padding:0.75rem 1.25rem;
+      background:#ff6f3c;
+      color:#fff;
+      border:none;
+      cursor:pointer;
+      border-radius:8px;
+      font-weight:600;
+      text-decoration:none;
+    }
+    .grid{
+      display:grid;
+      gap:1rem;
+      padding:1rem;
+      max-width:1024px;
+      margin:0 auto;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    }
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1rem;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .card h3{margin-top:0;margin-bottom:0.5rem;font-size:1.1rem;}
+    .card small{color:#555;}
+    .footer{
+      padding:2rem 1.5rem;
+      text-align:center;
+      font-size:0.85rem;
+      color:#555;
+    }
+    .badge{
+      display:inline-block;
+      background:#ffe9d4;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:0.6rem;
+      margin-bottom:6px;
+    }
+    .flex{display:flex;gap:1rem;flex-wrap:wrap;}
+    .tour-meta{display:flex;justify-content:space-between;font-size:0.8rem;margin:0.5rem 0;}
+    .contact{
+      display:grid;
+      gap:1rem;
+      grid-template-columns:1fr 1fr;
+      max-width:800px;
+      margin:1rem auto 2rem;
+    }
+    .contact div{background:var(--card);padding:1rem;border-radius:8px;box-shadow:var(--shadow);}
+    .small-note{font-size:0.8rem;color:#777;}
+    @media (max-width:800px){
+      .contact{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Star's Travel Trails</div>
+  <nav>
+    <a href="#tours">Tours</a>
+    <a href="#about">About</a>
+    <a href="#contact">Book</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Experience Local Stories, Not Just Destinations</h1>
+  <p>Guided cultural walks, culinary trails & curated day tours around NCR and beyond.</p>
+  <a class="btn" href="#tours">Explore Tours</a>
+</section>
+
+<section id="tours">
+  <div style="max-width:1024px;margin:0 auto;padding:0 1rem;">
+    <h2 style="text-align:center;">Featured Local Tours</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="badge">Heritage Walk</div>
+        <h3>Agra Local Heritage Day Trip</h3>
+        <div class="tour-meta">
+          <div>Duration: 1 Day</div>
+          <div>Price: ₹1,200</div>
+        </div>
+        <p>Explore the Taj Mahal, Agra Fort & local markets with stories from a local guide. Includes tea stop and photo tips.</p>
+        <a class="btn" href="#contact">Book Now</a>
+      </div>
+      <div class="card">
+        <div class="badge">Food Trail</div>
+        <h3>Street Eats & Secrets</h3>
+        <div class="tour-meta">
+          <div>Duration: Half Day</div>
+          <div>Price: ₹900</div>
+        </div>
+        <p>Taste authentic local snacks while walking through hidden lanes, with history and chef-style commentary.</p>
+        <a class="btn" href="#contact">Book Now</a>
+      </div>
+      <div class="card">
+        <div class="badge">Spiritual</div>
+        <h3>Vrindavan & Barsana Immersion</h3>
+        <div class="tour-meta">
+          <div>Duration: 1 Day</div>
+          <div>Price: ₹1,500</div>
+        </div>
+        <p>Temple visits, local sweets, and stories of Krishna—crafted for meaningful cultural connection.</p>
+        <a class="btn" href="#contact">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" style="padding:2rem 1rem;max-width:900px;margin:0 auto;">
+  <div class="card">
+    <h2>About Star's Travel Trails</h2>
+    <p>Hello! I'm Star, a guide who believes the best travel memories come from people, stories, and food. I curate small-group experiences that go beyond the typical tourist route—blending culture, flavor, and local insight. Perfect for weekend explorers, family outings, and curious travelers.</p>
+    <p class="small-note">All tours are small-group, safe, and customizable. Local transportation and light refreshments included unless specified.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div>
+      <h3>Book a Tour</h3>
+      <p>Send a message to reserve your spot. Include:</p>
+      <ul>
+        <li>Tour name</li>
+        <li>Date preferred</li>
+        <li>Group size</li>
+        <li>Contact number</li>
+      </ul>
+      <p><strong>Email:</strong> star@example.com</p>
+      <p><strong>WhatsApp:</strong> +91 98XXXXXX</p>
+    </div>
+    <div>
+      <h3>Why Travel With Us?</h3>
+      <ul>
+        <li>Local insider insights</li>
+        <li>Small, curated groups</li>
+        <li>Authentic food & cultural experiences</li>
+        <li>Flexible customization</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Star's Travel Trails. Crafted with passion. Follow us on social media for upcoming mini tours.</p>
+</footer>
+
+</body>
+</html>
